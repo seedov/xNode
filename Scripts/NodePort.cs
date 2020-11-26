@@ -129,7 +129,7 @@ namespace XNode {
             return connectedPort.GetOutputValue();
         }
 
-        /// <summary> Return the output values of all connected ports. </summary>
+        /// <summary> Return the input values of all connected ports. </summary>
         /// <returns> <see cref="NodePort.GetOutputValue"/> </returns>
         public object[] GetInputValues() {
             object[] objs = new object[ConnectionCount];
@@ -145,14 +145,14 @@ namespace XNode {
             return objs;
         }
 
-        /// <summary> Return the output value of the first connected port. Returns null if none found or invalid. </summary>
+        /// <summary> Return the input value of the first connected port. Returns null if none found or invalid. </summary>
         /// <returns> <see cref="NodePort.GetOutputValue"/> </returns>
         public T GetInputValue<T>() {
             object obj = GetInputValue();
             return obj is T ? (T) obj : default(T);
         }
 
-        /// <summary> Return the output values of all connected ports. </summary>
+        /// <summary> Return the input values of all connected ports. </summary>
         /// <returns> <see cref="NodePort.GetOutputValue"/> </returns>
         public T[] GetInputValues<T>() {
             object[] objs = GetInputValues();
